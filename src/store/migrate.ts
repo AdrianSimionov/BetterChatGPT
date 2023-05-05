@@ -71,9 +71,9 @@ export const migrateV5 = (persistedState: LocalStorageInterfaceV5ToV6) => {
 export const migrateV6 = (persistedState: LocalStorageInterfaceV6ToV7) => {
   if (
     persistedState.apiEndpoint ===
-    'https://sharegpt.churchless.tech/share/v1/chat'
+    'https://api.openai.com/v1/chat/completions'
   ) {
-    persistedState.apiEndpoint = 'https://chatgpt-api.shn.hk/v1/';
+    persistedState.apiEndpoint = 'https://api.openai.com/v1/chat/completions';
   }
   if (!persistedState.apiKey || persistedState.apiKey.length === 0)
     persistedState.apiKey = '';
